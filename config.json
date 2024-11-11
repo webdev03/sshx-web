@@ -1,0 +1,5 @@
+{
+    "sshxPath": "/home/neoroll/.nix-profile/bin/sshx",
+    "allowedPasswords": ["examplePassword"],
+    "port": 10458
+}
