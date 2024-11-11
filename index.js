@@ -46,7 +46,7 @@ app.get('/', (_req, res) => {
           <form action="/action" method="POST">
             <label for="pass">password please:</label><br>
             <input type="password" id="pass" name="pass"><br>
-            <input type="submit" value="Log In">
+            <input type="submit" value="log in">
           </form> 
           <br>
           <a href="/shutdown">shutdown the sshx server</a>
@@ -69,7 +69,7 @@ app.get('/shutdown', (_req, res) => {
         <form action="/action-shutdown" method="POST">
           <label for="pass">password please:</label><br>
           <input type="password" id="pass" name="pass"><br>
-          <input type="submit" value="Shutdown">
+          <input type="submit" value="shutdown">
         </form> 
       </body>
     </html>
