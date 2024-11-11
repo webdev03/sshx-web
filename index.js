@@ -37,16 +37,20 @@ app.get('/', (_req, res) => {
     res.send(`
     <!DOCTYPE html>
     <html>
-       <body>
-       <h1>log in</h1>
-       <form action="/action" method="POST">
-         <label for="pass">Password Please:</label><br>
-         <input type="password" id="pass" name="pass"><br>
-         <input type="submit" value="Log In">
-       </form> 
-       <br>
-       <a href="/shutdown">Shutdown the sshx server</a>
-       </body>
+       <head>
+          <title>sshx-web</title>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+       </head>
+       <body><main class="container">
+          <h1>log in</h1>
+          <form action="/action" method="POST">
+            <label for="pass">password please:</label><br>
+            <input type="password" id="pass" name="pass"><br>
+            <input type="submit" value="Log In">
+          </form> 
+          <br>
+          <a href="/shutdown">shutdown the sshx server</a>
+       </main></body>
     </html>
     `.trim())
 })
@@ -56,7 +60,11 @@ app.get('/shutdown', (_req, res) => {
     res.send(`
     <!DOCTYPE html>
     <html>
-      <body>
+      <head>
+        <title>sshx-web</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+      </head>
+      <body><main class="container">
         <h1>shutdown</h1>
         <form action="/action-shutdown" method="POST">
           <label for="pass">password please:</label><br>
