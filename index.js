@@ -103,10 +103,12 @@ app.post("/action-shutdown", async (req, res) => {
     const pass = (req.body.pass);
     let success = false;
     for (const allowed of require("./config.json").allowedPasswords) {
-        if (timingSafeEqual(Buffer.from(pass, "utf16le"), Buffer.from(allowed, "utf16le"))) {
-            success = true;
-            break;
-        }
+        try {
+            if (timingSafeEqual(Buffer.from(pass, "utf16le"), Buffer.from(allowed, "utf16le"))) {
+                success = true;
+                break;
+            }
+        } catch { }
     }
     if (!success) {
         res.send("Wrong password")
